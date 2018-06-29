@@ -13,10 +13,6 @@
             name="viewmodel"
             type="com.example.terced_feliper.databindingtest.ui.MainViewModel"/>
 
-        <variable
-            name="handlers"
-            type="com.example.terced_feliper.databindingtest.ui.MainFragmentHandler" />
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -58,7 +54,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:text="Button"
-            android:onClick="@{handlers::nameButtonClick}"
+            android:onClick="@{() -> viewmodel.changeName(user)}"
             app:layout_constraintBaseline_toBaselineOf="@+id/nameEditText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
